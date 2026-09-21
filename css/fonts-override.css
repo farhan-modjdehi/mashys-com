@@ -1,0 +1,61 @@
+/* Force Raleway everywhere the Squarespace theme hard-codes Helvetica/Arial.
+   Loaded AFTER site.css so these win. The whole site is meant to be Raleway;
+   these hooks (buttons, image-block titles/subtitles, product scarcity text,
+   and assorted small-text blocks) shipped with a Helvetica Neue default. */
+
+/* Broad safety net: every content/block element inherits Raleway. */
+body,
+.sqs-block,
+.sqs-block-content,
+.sqs-html-content,
+.sqs-html-content p,
+.sqs-html-content li,
+.sqs-html-content h1,
+.sqs-html-content h2,
+.sqs-html-content h3,
+.sqs-html-content h4,
+.sqs-html-content h5,
+.sqs-html-content h6,
+.sqs-html-content a,
+.sqs-html-content span,
+.sqs-html-content strong,
+.sqs-html-content em {
+  font-family: "Raleway", Arial, sans-serif !important;
+}
+
+/* Buttons */
+.sqs-block-button .sqs-block-button-element,
+.sqs-block-button .sqs-block-button-element--small,
+.sqs-block-button .sqs-block-button-element--medium,
+.sqs-block-button .sqs-block-button-element--large,
+.small-button-block-font,
+.medium-button-block-font,
+.large-button-block-font,
+.system-button-font,
+.sqs-editable-button,
+.sqs-editable-button-font,
+.announcement-bar-font {
+  font-family: "Raleway", Arial, sans-serif !important;
+}
+
+/* Image block titles / subtitles / buttons (specials, services, products) */
+.sqs-block-image .image-title p,
+.sqs-block-image .image-subtitle p,
+.sqs-block-image .image-button a,
+[class*="tweak-image-block-"] {
+  font-family: "Raleway", Arial, sans-serif !important;
+}
+
+/* Product list / detail small text */
+#productList .product .product-scarcity,
+#productDetails .product-scarcity,
+#productDetails .product-restock-notification .product-restock-cta,
+.tweak-product-list-scarcity-font,
+.tweak-product-details-scarcity-font,
+.tweak-product-details-restock-notification-font,
+.ProductItem-details,
+.ProductItem-details *,
+.product-title,
+.product-price {
+  font-family: "Raleway", Arial, sans-serif !important;
+}
