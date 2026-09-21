@@ -1,0 +1,20 @@
+/* Banner pages (Gallery, Reflexology): the transparent header (logo + nav)
+   is absolutely positioned OVER the banner starting at the top of the
+   viewport, so the banner must reserve enough height for it before the
+   title. The nav can wrap to two rows on narrow screens, so we give the
+   banner a min-height and vertically center the title in the space BELOW
+   the header rather than relying on a fixed pixel padding that a wrapped
+   nav would overlap. */
+.transparent-header .banner-thumbnail-wrapper {
+  min-height: 460px;
+  padding-top: 320px;      /* clears logo + (possibly two-row) nav */
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+/* On wider screens the nav fits on one row, so less clearance is needed. */
+@media only screen and (min-width: 900px) {
+  .transparent-header .banner-thumbnail-wrapper {
+    padding-top: 300px;
+  }
+}
